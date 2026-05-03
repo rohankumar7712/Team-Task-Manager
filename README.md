@@ -83,31 +83,37 @@ From project planning to execution, TaskFlow keeps everything organized in one s
 - Node.js & NPM  
 - Database (SQLite / MySQL / PostgreSQL)  
 
----
-
-### ⚡ Setup Steps
-
-#### 1. Clone Repository
+⚡ Setup Steps
+1. Clone Repository
 ```bash
 git clone https://github.com/rohankumar7712/Team-Task-Manager.git
 cd Team-Task-Manager
-
-#### 2. Install Dependencies
+```
+2. Install Dependencies
 ```bash
 composer install
 npm install
-
-#### 3. Configure Environment
+```
+3. Configure Environment
 ```bash
 cp .env.example .env
 php artisan key:generate
-
+```
 4. Setup Database
+```bash
 touch database/database.sqlite
 php artisan migrate --seed
+```
 5. Build Assets
+```bash
 npm run build
 # or for development
 npm run dev
+```
 6. Run Server
+```bash
 php artisan serve
+```
+
+---
+
