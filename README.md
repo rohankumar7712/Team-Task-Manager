@@ -4,25 +4,26 @@ Manage your team's tasks with ease. TaskFlow is a powerful, modern task manageme
 
 ## 📸 Screenshots
 
-Landing Page:
+**Landing Page:**
+<img width="1878" height="871" alt="image" src="https://github.com/user-attachments/assets/84c481b1-a3b4-46b9-9e00-768cf9e83e49" />
 
-Login Page:
+**Login Page:**
+<img width="1865" height="864" alt="image" src="https://github.com/user-attachments/assets/dde93dbf-bca0-43dc-97aa-758259aa0c6e" />
 
-Admin Dashboard:
+**Admin Dashboard:**
 <img width="1919" height="867" alt="image" src="https://github.com/user-attachments/assets/93f2fc85-629c-4853-88e9-0cc138b24aef" />
 
-Member Dashboard:
+**Member Dashboard:**
+<img width="1919" height="869" alt="image" src="https://github.com/user-attachments/assets/859550c7-9c2d-4295-8f0e-b77ff6894877" />
 
-Project Creation :
+**Project Creation:**
 <img width="1919" height="871" alt="image" src="https://github.com/user-attachments/assets/7f29a307-1a63-4a03-a631-c35cf6b8cd1a" />
 
-Create Task :
+**Create Task:**
 <img width="1919" height="879" alt="image" src="https://github.com/user-attachments/assets/3ed3d681-ac92-4380-97a9-fa894f3a1942" />
 
-Team Management :
+**Team Management:**
 <img width="1919" height="867" alt="image" src="https://github.com/user-attachments/assets/684ea099-d61a-4172-b41c-89dfa57badd2" />
-
-
 
 ---
 
