@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+
+        <title>{{ config('app.name', 'TaskFlow') }}</title>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <style>
+            .auth-container {
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 1rem;
+            }
+            .auth-card {
+                width: 100%;
+                max-width: 450px;
+                margin-top: 2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="auth-container">
+            <div style="font-size: 2.5rem; font-weight: 800; color: var(--primary);">TaskFlow</div>
+
+            <div class="glass-card auth-card">
+                {{ $slot }}
+            </div>
+        </div>
+    </body>
+</html>
