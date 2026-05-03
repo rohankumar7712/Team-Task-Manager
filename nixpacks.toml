@@ -1,0 +1,8 @@
+[phases.build]
+cmds = ["composer install --no-dev --optimize-autoloader", "npm install", "npm run build"]
+
+[phases.postBuild]
+cmds = ["php artisan migrate --force", "php artisan optimize", "php artisan storage:link"]
+
+# Nixpacks will automatically detect this is a Laravel app and use Apache/Nginx.
+# No [start] command needed unless you want to override the default production server.
