@@ -115,5 +115,34 @@ npm run dev
 php artisan serve
 ```
 
+## 📡 API Endpoints
+
+TaskFlow includes a RESTful API for external integrations.
+
+- **GET `/api/projects`**  
+  List all projects for the user  
+
+- **GET `/api/projects/{id}`**  
+  Detailed project view  
+
+- **GET `/api/tasks`**  
+  List assigned tasks  
+
+- **GET `/api/tasks/{id}`**  
+  Task detail view  
+
+- **GET `/api/user`**  
+  Current profile information  
+
+---
+
+## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+
+Built with ❤️ using Laravel.
+
 ---
 
