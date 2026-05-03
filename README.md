@@ -1,59 +1,108 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# TaskFlow 🚀
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Manage your team's tasks with ease. TaskFlow is a powerful, modern task management system designed for high-velocity teams who demand clarity and efficiency in their digital workspace.
 
-## About Laravel
+![TaskFlow Preview](https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## ✨ Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **📊 Comprehensive Dashboard**: Get a bird's-eye view of all your projects and tasks in one place.
+- **📁 Project Management**: Organize work into distinct projects with dedicated owners and team members.
+- **✅ Task Tracking**: Create, assign, and track tasks with status updates, priority levels, and due dates.
+- **👥 Team Collaboration**: Manage your team members and their roles within projects seamlessly.
+- **🔐 Secure Authentication**: Built-in user registration and login system powered by Laravel Breeze.
+- **🔌 REST API Support**: Integrate with other tools using the built-in API for projects and tasks.
+- **📱 Responsive Design**: A beautiful, modern interface built with Tailwind CSS that works on all devices.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🛠️ Tech Stack
 
-## Learning Laravel
+- **Backend**: [Laravel 12.x](https://laravel.com/) (PHP 8.2+)
+- **Frontend**: [Tailwind CSS](https://tailwindcss.com/), [Alpine.js](https://alpinejs.dev/), Blade Templates
+- **Authentication**: [Laravel Breeze](https://laravel.com/docs/breeze) & [Sanctum](https://laravel.com/docs/sanctum)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Database**: Supports MySQL, PostgreSQL, SQLite, and SQL Server.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## 🚀 Getting Started
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Follow these steps to get the project up and running on your local machine.
 
-## Laravel Sponsors
+### Prerequisites
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- PHP 8.2 or higher
+- Composer
+- Node.js & NPM
+- SQLite (or any other supported database)
 
-### Premium Partners
+### Installation
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/rohankumar7712/Team-Task-Manager.git
+   cd Team-Task-Manager
+   ```
 
-## Contributing
+2. **Install PHP dependencies**:
+   ```bash
+   composer install
+   ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+3. **Install NPM dependencies**:
+   ```bash
+   npm install
+   ```
 
-## Code of Conduct
+4. **Environment setup**:
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+5. **Database setup**:
+   For SQLite (default):
+   ```bash
+   touch database/database.sqlite
+   php artisan migrate
+   ```
 
-## Security Vulnerabilities
+6. **Build assets**:
+   ```bash
+   npm run build
+   ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+7. **Run the development server**:
+   ```bash
+   php artisan serve
+   ```
 
-## License
+Your application should now be running at `http://localhost:8000`.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 📡 API Documentation
+
+TaskFlow provides a basic REST API for external integrations. All API routes require Sanctum authentication.
+
+### Endpoints
+
+| Method | Endpoint | Description |
+| --- | --- | --- |
+| `GET` | `/api/projects` | List all projects |
+| `GET` | `/api/projects/{id}` | Get project details |
+| `GET` | `/api/tasks` | List all tasks |
+| `GET` | `/api/tasks/{id}` | Get task details |
+| `GET` | `/api/user` | Get authenticated user info |
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+---
+Built with ❤️ using [Laravel](https://laravel.com).
