@@ -2,107 +2,124 @@
 
 Manage your team's tasks with ease. TaskFlow is a powerful, modern task management system designed for high-velocity teams who demand clarity and efficiency in their digital workspace.
 
-![TaskFlow Preview](https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg)
+## 📸 Screenshots
 
-## ✨ Features
+| Dashboard Overview | Task Management |
+| --- | --- |
+| ![Dashboard](assets/screenshots/dashboard.png) | ![Tasks](assets/screenshots/tasks.png) |
 
-- **📊 Comprehensive Dashboard**: Get a bird's-eye view of all your projects and tasks in one place.
-- **📁 Project Management**: Organize work into distinct projects with dedicated owners and team members.
-- **✅ Task Tracking**: Create, assign, and track tasks with status updates, priority levels, and due dates.
-- **👥 Team Collaboration**: Manage your team members and their roles within projects seamlessly.
-- **🔐 Secure Authentication**: Built-in user registration and login system powered by Laravel Breeze.
-- **🔌 REST API Support**: Integrate with other tools using the built-in API for projects and tasks.
-- **📱 Responsive Design**: A beautiful, modern interface built with Tailwind CSS that works on all devices.
+---
 
-## 🛠️ Tech Stack
+## ✨ Key Features
 
-- **Backend**: [Laravel 12.x](https://laravel.com/) (PHP 8.2+)
-- **Frontend**: [Tailwind CSS](https://tailwindcss.com/), [Alpine.js](https://alpinejs.dev/), Blade Templates
-- **Authentication**: [Laravel Breeze](https://laravel.com/docs/breeze) & [Sanctum](https://laravel.com/docs/sanctum)
-- **Build Tool**: [Vite](https://vitejs.dev/)
-- **Database**: Supports MySQL, PostgreSQL, SQLite, and SQL Server.
+### 📊 Comprehensive Dashboard
+- **Real-time Stats**: Instantly view Total Tasks, Active Tasks, Completed Tasks, and Overdue Tasks.
+- **Recent Activity**: Track the latest updates across all projects.
+- **Personalized View**: Users see their own tasks, while Admins get a full system overview.
 
-## 🚀 Getting Started
+### 📁 Advanced Project Management
+- **Ownership & Collaboration**: Each project has a dedicated owner and can have multiple team members.
+- **Bento-Grid UI**: Projects are displayed in a modern, card-based layout for better visibility.
+- **Project Health**: Visual indicators of project progress and task distribution.
+
+### ✅ Task Lifecycle & Tracking
+- **Granular Control**: Set Priority (Low, Medium, High) and Status (To Do, In Progress, Completed).
+- **Deadlines**: Automatic overdue tracking based on due dates.
+- **Assignments**: Effortlessly assign tasks to team members with automatic notification logic.
+
+### 👥 Team & User Management
+- **Role-Based Access (RBAC)**: Distinct permissions for Admins and regular Team Members.
+- **Extended Profiles**: Track important member data like Date of Birth (DOB) and Personal Email.
+- **Automated Credentialing**: System-generated passwords for new members with secure storage.
+
+---
+
+## 🛠️ Technical Architecture
+
+### **Backend (Laravel 12.x)**
+- **Eloquent ORM**: Complex relationships between Users, Projects, and Tasks (Many-to-Many & One-to-Many).
+- **Middleware**: Secure routes ensuring only authorized users can access sensitive data.
+- **Sanctum API**: Stateful authentication for SPA and external mobile integrations.
+
+### **Frontend (Modern Stack)**
+- **Tailwind CSS**: A custom-themed design system using HSL colors for a premium look.
+- **Alpine.js**: Lightweight reactivity for modals, dropdowns, and dynamic UI elements.
+- **Blade Components**: Reusable UI components for consistent design across the platform.
+
+### **Database Schema**
+- **Optimized Indexing**: Fast lookups for task status and project memberships.
+- **Soft Deletes**: (If implemented) Secure data handling for projects and tasks.
+
+---
+
+## 🚀 Installation & Setup
 
 Follow these steps to get the project up and running on your local machine.
 
 ### Prerequisites
+- **PHP**: 8.2 or higher
+- **Composer**
+- **Node.js & NPM**
+- **Database**: SQLite (default), MySQL, or PostgreSQL
 
-- PHP 8.2 or higher
-- Composer
-- Node.js & NPM
-- SQLite (or any other supported database)
-
-### Installation
-
-1. **Clone the repository**:
+### Setup Steps
+1. **Clone & Enter**:
    ```bash
    git clone https://github.com/rohankumar7712/Team-Task-Manager.git
    cd Team-Task-Manager
    ```
 
-2. **Install PHP dependencies**:
+2. **Install Dependencies**:
    ```bash
    composer install
-   ```
-
-3. **Install NPM dependencies**:
-   ```bash
    npm install
    ```
 
-4. **Environment setup**:
+3. **Environment Config**:
    ```bash
    cp .env.example .env
    php artisan key:generate
    ```
 
-5. **Database setup**:
-   For SQLite (default):
+4. **Database Migration**:
    ```bash
+   # Create SQLite database if using default
    touch database/database.sqlite
-   php artisan migrate
+   php artisan migrate --seed
    ```
 
-6. **Build assets**:
+5. **Build & Run**:
    ```bash
    npm run build
+   # or for development
+   npm run dev
    ```
 
-7. **Run the development server**:
+6. **Start Server**:
    ```bash
    php artisan serve
    ```
 
 Your application should now be running at `http://localhost:8000`.
 
-## 📡 API Documentation
+---
 
-TaskFlow provides a basic REST API for external integrations. All API routes require Sanctum authentication.
+## 📡 API Endpoints
 
-### Endpoints
+TaskFlow includes a RESTful API for external integrations.
 
 | Method | Endpoint | Description |
 | --- | --- | --- |
-| `GET` | `/api/projects` | List all projects |
-| `GET` | `/api/projects/{id}` | Get project details |
-| `GET` | `/api/tasks` | List all tasks |
-| `GET` | `/api/tasks/{id}` | Get task details |
-| `GET` | `/api/user` | Get authenticated user info |
+| `GET` | `/api/projects` | List all projects for the user |
+| `GET` | `/api/projects/{id}` | Detailed project view |
+| `GET` | `/api/tasks` | List assigned tasks |
+| `GET` | `/api/tasks/{id}` | Task detail view |
+| `GET` | `/api/user` | Current profile information |
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+---
 
 ## 📄 License
-
-This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 Built with ❤️ using [Laravel](https://laravel.com).
