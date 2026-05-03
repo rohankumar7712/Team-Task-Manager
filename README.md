@@ -4,9 +4,16 @@ Manage your team's tasks with ease. TaskFlow is a powerful, modern task manageme
 
 ## 📸 Screenshots
 
-| Dashboard Overview | Task Management |
-| --- | --- |
-| ![Dashboard](assets/screenshots/dashboard.png) | ![Tasks](assets/screenshots/tasks.png) |
+Landing Page:
+
+Login Page:
+
+Admin Dashboard:
+<img width="1919" height="867" alt="image" src="https://github.com/user-attachments/assets/93f2fc85-629c-4853-88e9-0cc138b24aef" />
+
+Member Dashboard:
+
+
 
 ---
 
