@@ -91,3 +91,23 @@ From project planning to execution, TaskFlow keeps everything organized in one s
 ```bash
 git clone https://github.com/rohankumar7712/Team-Task-Manager.git
 cd Team-Task-Manager
+
+#### 2. Install Dependencies
+```bash
+composer install
+npm install
+
+#### 3. Configure Environment
+```bash
+cp .env.example .env
+php artisan key:generate
+
+4. Setup Database
+touch database/database.sqlite
+php artisan migrate --seed
+5. Build Assets
+npm run build
+# or for development
+npm run dev
+6. Run Server
+php artisan serve
